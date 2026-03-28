@@ -2,3 +2,16 @@
     color:red;
     font-weight: 300;
 }
+
+#blue{
+    color:blue;
+    font-size: medium;
+}
+*{
+    background-color: darksalmon;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+}
