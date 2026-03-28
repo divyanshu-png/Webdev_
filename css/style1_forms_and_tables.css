@@ -1,0 +1,31 @@
+/* this is a comment. CSS: Cascading Style Sheets, where cascade means a waterfall where water falls from one level to another. Similar to that the css sheets are applied like a cascade, i.e We start from the most general and all the way down to the most specific styling requirement */
+body{
+    background-color: lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
+    color: chocolate;
+}
+h2{
+    color: red;
+    margin-left: 40px;
+}
+/*Element selector h2 and body*/
+.container{
+    color: blue;
+}
+/*Class selector */
+
+#link{
+    text-shadow: 20px;
+    -webkit-text-fill-color: chartreuse;
+}
+/*id selector => preffered when you have a specific element that needs you to style as id is unique for each element , not like class that can be assigned to multiple HTML elements  */
+
+p[draggable="true"]{
+    color: lightblue;
+}
+
+*{
+    font-family: cursive;
+    /*Universal Stylesheet selector => Applies rules to all the elements in the html file, here applies cursive font to all the text irresective of element */
+}
+

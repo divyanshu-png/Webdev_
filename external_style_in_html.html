@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Externally Styled Sheets </title>
+    <link rel="stylesheet" href="./css/style1_forms_and_tables.css">
+</head>
+<body>
+    <H2>This is a H2 heading </H2>
+    <p>This is a paragrapdh about External Styling in HTML documents.
+        <br>
+        To use an external stylesheet in HTML, you need two things: a separate CSS file and a specific HTML tag to link them together. This method is considered a best practice for clean, maintainable code. 
+    </p>
+    <h3>Key attributes: </h3>
+    <ul style="font-size: 14px; color:aqua">
+        <li>rel="stylesheet": This is a required attribute that tells the browser the relationship between the current HTML document and the linked file is a stylesheet</li>
+        <li>href="styles.css": This attribute specifies the path or location of your CSS file. Adjust the path as necessary if your file is in a different directory</li>
+    </ul>
+    <P class="container">Thus we can apply both internal/ inline and external styles to same  elements at the same time and it will work on priortiy basis on which one to apply if they clash <br>
+    <B>A Css property defined with <i>'!important'</i></B> overrides any other declaration.<br>
+    <b>Inline Styles</b>(css inside the element as an attribute) comes after that.<br> And after that comes the<b> Internal </b>(css written in the head element  of the html as an style element) and then the <b>external stylesheet</b>(stylesheet added as a link in the head as well using a link  element and href, rel attribute ) in priority order.
+    </P>
+
+    <a id="link" href="https://www.linkedin.com/in/divyanshu-s-08b163262/" >LinkedIn Connection request</a>
+
+    <p draggable="true">this is an example paragraph for explaining that we can also use certain components of an element and apply style to it.<br>like draggable attribute in this parapraph and the style applied to the selector makes the text appear Lightblue. This is called selector specificity in which the  </p>
+
+    
+</body>
+</html>
