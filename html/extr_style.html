@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Properties</title>
+    <style>
+        #px{ 
+            font-size: 20px;
+        }
+        #pt{ font-size: 20pt;}
+        #em{font-size: 1em;}
+        #rem{font-size: 2rem;}
+        h2{
+            color: crimson;
+        }
+        #nb{
+            font-weight:bold ;
+        }
+        #lb{
+            font-weight: lighter;
+        }
+        
+    #oswald{
+        font-family: "Oswald", sans-serif;
+        font-weight: 800;
+    }
+    #poppins-text{
+        font-family: "Poppins", sans-serifS;
+    }
+    div{
+        text-align: center;
+    }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <h1 style="text-align: center;"> Font Properties </h1>
+    <h2>Font Sizes</h2>
+    <p> Font sizes can be given in multiple types for example: <br> 
+    <ul>
+        <li id="px">Pixels: px => 1/96th of an inch (20 px size) </li>
+        <li id="pt">Points: pt => 1/72nd of an inch (20 pt size)</li>
+        <li id="em">100% of parent: em =>
+            it means the relative percentage factor of the body elements's size. (1 em size)
+        </li>
+        <li id="rem">
+            100% of root: rem => relative to the root of the html file (2 rem size)
+        </li>
+    </ul>
+    </p>
+    <h2>Font Weight</h2>
+    <p> Sets the thickness of the text chracter. Font weight can be used in three different types :
+        <br> 
+        <ul>
+            <li id="nb">For example: Normal/bold (Bold weight applied) </li>
+            <li id="lb">Relative to parent: for example: lighter/ bolder (lighter font weight applied). Lighter reduces the font weight number by 100 and bolder increases it by 100.</li>
+            <li style="font-weight: 700;">Number : for example: 100 to 900 in th range of light to bold (Font weight of 700 applied) </li>
+        </ul>
+    </p>
+    
+    <h2> Font Family </h2>
+    <p> Determines what your text looks like. it is specified in css by seperating A typeface that accepts one or more font names, separated by commas. The browser attempts to use the first font in the list that is available on the user's computer or can be downloaded. <br> 
+        The list awlays end with a generic font family as a fallback option if any of the specific fonts are not available. 
+        <br> 
+        The font typeface should be written in qoutes if it has more than one word. example : "Times New Serif" , sans-serif 
+        <br> 
+        The different font families ( that are used as generic fallback fonts are as follows):
+        <ul>
+            <li>serif: Fonts with small strokes (serifs) at the edges of each letter</li>
+            <li>sans-serif: Fonts with clean lines and no strokes.edges at right angle. /li>
+            <li>monospace: Fonts where all letters have the same fixed width, often used for code. (Typewriter font) </li>
+            <li>cursive: Fonts that imitate human handwriting</li>
+            <li>fantasy: Decorative or playful fonts</li>
+        </ul>
+        Other options are including Google fonts from  google fonts website as a link in the header. 
+        <br> 
+        <B> Example:</B>
+        <div id="oswald"> This is a text in oswald font type with a backup of sans-serif geneic font. </div>
+        <div style="font-family: fantasy;"> This is another text in Fantasy type of text. </div>
+        <div id="poppins-text"> प्रत्येक व्यक्ति को विचार और उसकी अभिव्यक्ति की स्वतन्त्रता का अधिकार है ।  </div>
+     </p>
+
+     
+</body>
+</html>

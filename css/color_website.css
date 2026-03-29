@@ -7,6 +7,9 @@
     color:blue;
     font-size: medium;
 }
+
+/* Background color property sets the color of the background to the specified property value and the color property to the color of thea text */
+
 *{
     background-color: darksalmon;
 }
@@ -14,4 +17,7 @@
 img{
     height: 200px;
     width: 200px;
+    border-color: 9AB17A;
+    border: 10px;
 }
+/*can use hexadecimal code in place of the name*/
