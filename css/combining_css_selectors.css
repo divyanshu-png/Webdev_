@@ -1,0 +1,19 @@
+h1, h2{
+    color: blueviolet;
+}
+
+.box> p{
+    color: firebrick
+}
+
+.box .list{
+    color: blue;
+}
+
+#code{
+    text-align: center;
+}
+
+li.done{
+    color: seagreen
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/heirarchy_cascade.css">
+
+    <style>
+        .internal{
+            color: blue;
+            font-size: 20px;
+        }
+
+        li{
+            color: blue;
+        }
+        .first-class{
+            color: red;
+        }
+        li[draggable]{
+            color: purple
+        }
+        #first-id{
+            color: orange
+        }
+        #order{
+            text-align: center;
+        }
+
+        /*Practice styles*/
+        .box{
+            padding: 10px;
+            background-color: blue;
+        }
+        #outer-box{
+            background-color: purple;
+        }
+        .white-text{
+            color: white;
+        }
+        .inner-box{
+            background-color: red;
+        }
+        .yellow-text{ color: yellow;}
+    </style>
+</head>
+<body>
+    <p><b>Inline Styles</b>(css inside the element as an attribute) comes after that.<br> And after that comes the<b> Internal </b>(css written in the head element  of the html as an style element) and then the <b>external stylesheet</b>(stylesheet added as a link in the head as well using a link  element and href, rel attribute ) in priority order.
+    <br>
+How it will start looking for the styles is first it'll look if there is any external stlyes applied to the tag. Then it will move on to the internal style rules if any and at last see and apply inline rules if any</p>
+
+<p> Example</p>
+<ol>
+    <li id="external">This item will have the basic styles apllied through an external stylesheet</li>
+    <li class="internal">This item will have internal stylesheet rules applied to it.</li>
+    <li style="font-size: 30px; color: red;"> This item has inline styling rules applied to it. </li>
+</ol>
+
+
+<p>There are four broad categories which we look at when we're determining the overall level of importance of a CSS rule. 
+    <h3>1. Position of the CSS rule</h3>
+    for example :
+    <pre>
+        li{
+            color: red;
+            color: green;
+        }
+        li{
+            color: blue;
+        }
+    </pre>
+    The blue color will be applied to the list element, as it is the last one appplied. The lower down in the CSS external file or in an internal style element, the more important it is. 
+
+    <h3>2. Specificty of the rule</h3>
+    Say for example for a list element of html has 
+    the following list element: <br>
+        <li id="first-id" class="first-class" draggable="true">This is a list element</li>
+    <pre>
+        li{ #Element specificity
+            color: blue; 
+        }
+        .first-class{ #class specificity
+            color: red;
+        }
+        li[draggable]{ #attribute specificity
+            color: purple
+        }
+        #first-id{ #id specificity
+            color: orange
+        }
+    </pre>
+    
+    Thus we see only the color orange is applied as an id assigned to an element has the highest level of specificity as CSS rules allow for only one unique id. Order of specificity thus is :
+    <br>
+    <p id="order"><b>element< class< attribute< id </b></p>
+
+    <h3>3. Type of the rule</h3>
+    The <b>inline> internal > external </b>flow of the relevenace of type of CSS rule applied
+
+    <h3>4. Importance of CSS rule<: !important keyword</h3>
+
+
+    OVERALL ORDER OF THE SPECIFICITY : 
+    <b>!important> type of CSS> Specificty of the rule selector > Position of the rule </b>
+
+    <h2>Practice</h2>
+    <div id="outer-box" class="box">
+        <div class="box">
+            <p class="yellow-text">Yellow Text</p>
+            <div class="box inner-box">
+                <p class="white-text">White Text</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <p class="yellow-text">Yellow Text</p>
+            <div class="box inner-box">
+                <p class="white-text">White Text</p>
+            </div>
+        </div>
+    </div>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/combining_css_selectors.css">
+
+</head>
+<body>
+     <h2>Combining the Css selectors</h2>
+
+     <p><b>The different ways are</b>
+        <br>
+    1. Grouping
+    <pre>
+        selector1, selector2{
+            color: whatever 
+        }
+    </pre>
+    Example of grouping:<br>
+    <h1>To Do List</h1>
+    <h2>Monday</h2>
+    <div class="box">
+        <p class="done">Do these things today!</p>
+        <ul>
+            <li>Wash Clothes</li>
+            <li class="done">Read</li>
+            <li class="dine">Math Questions</li>
+        </ul>
+    </div>
+
+    <ul>
+        <p class="done">Other items</p>
+    </ul>
+    <p>The best preparation of tommorow is doing oyur best today. </p>
+</p>
+<hr>
+2. Child parent
+<pre>
+   selector1> selector2{
+        color: anything
+   } 
+   #selector1 is the parent selector and selector2 is the child selector. It basically says.: selector1 tag ke andar jonsa pehla selector2 tags hai use select kiya gaya hai.
+</pre>
+    Another example:
+
+    Example of child parent grouping that sets teh color of the first paragraph to firebrick<br>
+    <h1>To Do List</h1>
+    <h2>Monday</h2>
+    <div class="box">
+        <p class="done">Do these things today!</p>
+        <ul>
+            <li>Wash Clothes</li>
+            <li class="done">Read</li>
+            <li class="dine">Math Questions</li>
+        </ul>
+    </div>
+
+    <ul>
+        <p class="done">Other items</p>
+    </ul>
+    <p>The best preparation of tommorow is doing oyur best today. </p>
+<hr>
+    3. Descendant selector
+    <pre>
+        selector1 selctor2{
+            /*All descendant elements of the selector2 inside the selector1 are chosen */
+        }
+    </pre>
+    Example 
+    <div class="box">
+        <p class="done">Do these things today!</p>
+        <ul class="list">
+            <li>Wash Clothes</li>
+            <li class="_">Read</li>
+            <li class="_">Math Questions</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    4. Chaining selectors
+    <br>Apply where all selectors are true. 
+    <pre>
+        selector1selector2...{ #without space
+            color: whatever
+        }
+    </pre>
+
+    This is a simple yet effective tool to select a very specific element like:<br>
+    <p id="code"><code>h1#title.heading-big</code></p>
+    If youre chaining any other selector with an element selector, the element selector needs to be the first one to be mentioned otherwise itll be difficult to understand. <br>
+    Example for the chaining of selectors is :
+    <br>
+
+
+    <h1>To Do List</h1>
+    <h2>Monday</h2>
+    <div class="box">
+        <p class="done">Do these things today!</p>
+        <ul>
+            <li>Wash Clothes</li>
+            <li class="done">Read</li>
+            <li class="done">Math Questions</li>
+        </ul>
+    </div>
+
+    <ul>
+        <p class="done">Other items</p>
+    </ul>
+    <p>The best preparation of tommorow is doing oyur best today. </p>
+</p>
+</body>
+</html>

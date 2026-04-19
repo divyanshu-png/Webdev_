@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Border Manioulation{inline css applied}</h2>
+    <img src= "../divyanshu.png" alt="Image not found" border="20px solid black"  height="200px">
+    <br>
+
+    <img src= "../divyanshu.png" alt="Image not found"   height="200px" style="border: 10px dashed black";"> 
+    <!-- Sets the boder as a dashes line instead of a solid black line of "n" pixels-->
+    
+    <img src= "../divyanshu.png" alt="Image not found"   height="200px" style="border: 10px dashed black; border-top: 0px; "> 
+    <!--Removes/ sets the border top as 0px-->
+<br></br>
+    <img src= "../divyanshu.png" alt="Image not found"   height="200px" style="border: 10px dashed black; border-width: 2px 10px 20px 30px;">
+    <!--Sets the different sides of a border around a box to different thickness . Alternatively we can provide only two values and it sets the thickenss of those slternatively, for example-->
+    
+    <img src= "../divyanshu.png" alt="Image not found"   height="200px" style="border: 10px dashed black; border-width: 10px 30px;">
+    <!--It sets the top and bottom to 10 px each and right and left to 30 px each-->
+
+    <h2> Borde and Padding of the border</h2>
+    <p style="border: 2px solid black;">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur repellat minima? Laboriosam ipsa minima, perspiciatis rem neque aut accusamus culpa nemo consequuntur, id voluptas iste odio. Inventore, illo impedit.</p>
+    <p>Adding padding and margin to the border of this paragraph. Padding is the distance between the content and the border whereas the margin is the distance outside the elements' border and any other content on the screen</p>
+    <p style="border: 2px solid black; padding: 20px ; margin: 10px ;">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur repellat minima? Laboriosam ipsa minima, perspiciatis rem neque aut accusamus culpa nemo consequuntur, id voluptas iste odio. Inventore, illo impedit.</p>
+
+    <p>another example to understand this is </p>
+    <p style="border: 2px solid black; padding: 20px ; margin: 10px ; width: 200px;">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur repellat minima? Laboriosam ipsa minima, perspiciatis rem neque aut accusamus culpa nemo consequuntur, id voluptas iste odio. Inventore, illo impedit.</p>
+    <p style="border: 2px solid black; padding: 20px ; margin: 10px ; width: 200px; text-align: left;">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur repellat minima? Laboriosam ipsa minima, perspiciatis rem neque aut accusamus culpa nemo consequuntur, id voluptas iste odio. Inventore, illo impedit.</p>
+
+    <p> The padding and margin works similar to the border values provided as they can be given in the 4 dimensions all seperate or the 2 values given that correspond to the top-bottom and left-right alternatively.</p>
+<br></br>
+    <p style="border: 2px solid black; padding: 20px 10px ; margin: 10px 20px ; width: 200px;">Hello World! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequuntur repellat minima? Laboriosam ipsa minima, perspiciatis rem neque aut accusamus culpa nemo consequuntur, id voluptas iste odio. Inventore, illo impedit.</p>
+
+<div style="text-align: center; background-color: burlywood; padding: 20px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="Image of food" height="300px" style="border: 10px solid red; padding: 2px; margin: 10px; align-items:center;">
+    <figcaption style="margin-bottom: 10px;">This is the image of foods that we can consume</figcaption>
+</div>
+<!--Div tags are used as a invisible box, as a contaier, as it is invisible to the user and use them as a way to style grouped compoenents -->
+<div style="text-align: left; background-color: darkgrey; margin: 20 px; padding: 20px;">
+    <figure>
+        <pre>Buubble sort : 
+        <code>
+            def bubbleSort(arr):<br>
+            n = len(arr)<br>
+            # Traverse through all array elements
+            for i in range(n):
+                swapped = False
+                # Last i elements are already in place
+                for j in range(0, n-i-1):
+                    # Traverse the array from 0 to n-i-1
+                    # Swap if the element found is greater
+                    # than the next element
+                    if arr[j] > arr[j+1]:
+                        arr[j], arr[j+1] = arr[j+1], arr[j]
+                        swapped = True
+                # If no two elements were swapped by inner loop, then break
+                if not swapped:
+                    break
+
+        </code></pre>
+    </figure>
+</div>
+
+
+
+<div
+style="border: 10px solid black;
+        padding: 20px;
+        background-color: cornflowerblue;
+        height: 200px;
+        width: 200px;" >
+    <p style="margin: 0px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore error, provident molestiae sint repudiandae, saepe expedita sunt praesentium fuga eos ab veniam impedit a ut. Ab dicta rem ullam voluptates.</p>
+</div>
+
+<div style="border:solid black;
+            border-width: 20px 10px;            
+            background-color: chartreuse;
+            margin-left:260px ;
+            height: 200px ;
+            width: 200px;">
+</div>
+<div style="background-color: indianred;
+            border: 10px solid black;
+            height: 200px ;
+            width: 200px;
+            margin-left:40px">
+</div>
+</body>
+</html>
