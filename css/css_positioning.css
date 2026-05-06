@@ -1,0 +1,64 @@
+.border{
+    border: 10px solid black;
+
+}
+
+.static{
+    position: static;
+    /* left: 50px;
+    top: 50px; 
+    #Doesn't actually do anything as the image is set to static*/
+}
+
+.relative{
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+#ancestor_absolute{
+    position: relative;
+/*Absolute ka ancestor relative hona chahiye*/
+}
+
+.Absolute{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.Absolute-alternate{
+    position: absolute;
+}
+
+
+.Absolute_2{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: -1; /*Pushes the green image to the back of red image */
+}
+
+.Fixed{
+    position: fixed;
+    top: 500px;
+    left: 500px;
+}
+
+.blue-box{
+    background-color: blue;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+.red-circle{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    left: 250px;
+    top: 150px;
+}

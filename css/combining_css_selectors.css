@@ -1,3 +1,4 @@
+
 h1, h2{
     color: blueviolet;
 }
@@ -10,10 +11,14 @@ h1, h2{
     color: blue;
 }
 
-#code{
-    text-align: center;
-}
 
 li.done{
     color: seagreen
 }
+
+ul> p.done{
+    font-size: 0.5rem;
+}
+
+
+

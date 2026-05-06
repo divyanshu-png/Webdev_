@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/css_positioning.css">
+</head>
+<body>
+    <P>There are a total 4 ways of poitioning in CSS:
+        <ul>
+            <li>Static Positioning:
+                <p>The by default positioning of the element that doesn't need to be explicitly mentioned. </p>
+                <div class="border">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkScH8JekkZH7iArkjZ3B0q_GBEbpsRAjKg&s">
+                <img class="static" src="https://htmlcolorcodes.com/assets/images/colors/green-color-solid-background-1920x1080.png" alt="Image_screen" height="200px"></div>
+                 
+            </li>
+            <br>
+
+
+            <li>Relative Positioning:
+                <p>The most used kind of positioning. The element is positioned relative to its normal position in the document flow.
+Offsets move the element without affecting the space it originally occupied; other elements will not "fill the gap".
+Frequently used as a container for absolutely positioned child elements.
+<br> Relative means it is relative to it's supposed location(that shouldve been the case in static )
+</p>
+                <div class="border">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkScH8JekkZH7iArkjZ3B0q_GBEbpsRAjKg&s">
+                    <img class="relative" src="https://htmlcolorcodes.com/assets/images/colors/green-color-solid-background-1920x1080.png" alt="Image_screen" height="200px">
+</div>
+            </li>
+<br><br><br>
+            <li>Absolute Positioning:<BR>
+                <p>Position relative to the nearest positioined ancestor or top left corner of the webpage. Absolute position element ko normal document flow se bahar nikal deta hai. Yeh element apne sabse kareebi 'positioned' (relative/absolute) parent ke hisaab se top, bottom, left, right properties use karke kahin bhi rakha ja sakta hai. </p>
+                <div class="border" id="ancestor_absolute">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkScH8JekkZH7iArkjZ3B0q_GBEbpsRAjKg&s">
+                    <img class="Absolute" src="https://htmlcolorcodes.com/assets/images/colors/green-color-solid-background-1920x1080.png" alt="Image_screen" height="200px">
+</div>
+<br><br><br><br><br>
+<p>Another example</p>
+<div class="border" id="ancestor_absolute">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkScH8JekkZH7iArkjZ3B0q_GBEbpsRAjKg&s">
+                    <img class="Absolute-alternate" src="https://htmlcolorcodes.com/assets/images/colors/green-color-solid-background-1920x1080.png" alt="Image_screen" height="200px">
+</div>
+<br><br>
+<p>Z-index  property controls the stacking order of elements that overlap on a webpage. It essentially manages the third dimension—the "z-axis"—determining which elements appear closer to the viewer (on top) and which appear further away (behind). Let us understand this with the example of Absolute Positioning: </p>
+<div class="border" id="ancestor_absolute">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkScH8JekkZH7iArkjZ3B0q_GBEbpsRAjKg&s">
+                    <img class="Absolute_2" src="https://htmlcolorcodes.com/assets/images/colors/green-color-solid-background-1920x1080.png" alt="Image_screen" height="200px">
+</div>
+
+<br><br><br><br>
+
+            </li>
+            <br><br><br><br><br>
+            <li>Fixed Positioning
+                <p>Fixed positioning in CSS is a method used to anchor an element to a specific location relative to the browser's viewport. <u>Unlike other positioning types, a fixed element stays in the same place even when the page is scrolled.</u>
+            </p>
+            <div class="border">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKkScH8JekkZH7iArkjZ3B0q_GBEbpsRAjKg&s">
+                    <img class="Fixed" src="https://htmlcolorcodes.com/assets/images/colors/green-color-solid-background-1920x1080.png" alt="Image_screen" height="200px">
+</div>
+            </li>
+        </ul>
+    </P>
+
+    <p>Practice Exercise</p>
+
+    <div class="blue-box">
+        <div class="red-circle"></div>
+    </div>
+</body>
+</html>

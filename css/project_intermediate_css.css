@@ -1,0 +1,40 @@
+.flag{
+    height: 500px;
+    width: 900px;
+    background-color: red ;
+    color: white;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+p{
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.blue-div{
+    background-color: violet;
+    height: 50%;
+    position: relative;
+
+}
+
+
+.white-circle{
+    text-align: center;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    position: absolute;
+    left:40%;
+    top: 12%
+}
+.text-Laos{
+    color: black;
+    padding-top: 50px;
+    position: absolute;
+    left: 15px;
+}
