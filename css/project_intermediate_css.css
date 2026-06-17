@@ -1,9 +1,9 @@
 .flag{
-    height: 500px;
+    height: 600px;
     width: 900px;
-    background-color: red ;
+    background-color: #ce1126 ;
     color: white;
-    position: relative;
+    position: absolute;
     top: 100px;
     left: 100px;
 }
@@ -15,7 +15,7 @@ p{
 }
 
 .blue-div{
-    background-color: violet;
+    background-color: darkmagenta;
     height: 50%;
     position: relative;
 
@@ -34,7 +34,6 @@ p{
 }
 .text-Laos{
     color: black;
-    padding-top: 50px;
     position: absolute;
-    left: 15px;
+    left: 50px
 }

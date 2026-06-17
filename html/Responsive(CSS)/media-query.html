@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=@, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: red;
+            height:200px;
+            width: 300px;
+        }
+        @media(max-width:800px){
+            /*the max width specifies the width and below which the rule is applied to*/
+            div{
+                background-color: blue;
+                width:200px;
+            }
+        }
+        @media(min-width: 1200px){
+            /*the min width specifies the width and above which the rule is applied to*/
+            div{
+                background-color: green;
+                width: 400px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
