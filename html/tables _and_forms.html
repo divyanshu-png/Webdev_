@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
 <body>
-    <table border=2px>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6" style="background: red;">hello</div>
+                <div class="col-md-6" style="background: green;">FCI</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Rowspan and colspan property hamesha th ya td ke saath lagane ka rather than tr ke 
+    -->
+    <table class="table table-striped-columns table-bordered">
         <caption>Information of developers</caption>
         <thead>
+            <tr>
+                <th rowspan="2">S.No.</th>
+                <th colspan="3">Address</th>
+            </tr>
             <tr>
                 <th>Name</th>
                 <th>Age</th>
@@ -17,18 +36,20 @@
         </thead>
         <tbody>
             <tr>
+                <td>1</td>
                 <td>Alice</td>
                 <td>30</td>
                 <td>Delhi</td>
             </tr>
             <tr>
+                <td>2</td>
                 <td>Akash</td>
                 <td>29</td>
                 <td>Pune</td>
             </tr>
         </tbody>
         <tfoot>
-            <tr aria-rowspan="3"> <td>"Last Updated on: 2026-05-19" </td></tr>
+            <tr> <td colspan="4">"Last Updated on: 2026-05-19" </td></tr>
         </tfoot>
     </table>
 
@@ -36,7 +57,7 @@
     <hr>
     <form action="/file.php" method="post" >
         <label for="Name">Name:</label> 
-        <input type="text" id="name" name="username" required><br><br>
+        <input class="form-control" type="text" id="name" name="username" required><br><br>
 
         <label for="Age">Age:</label>
         <input type="number" id="age" name="age of the developer" required><br><br>
@@ -48,7 +69,7 @@
         <label for="Delhi">Delhi</label><br><br>
 
         <label for="person_photo" >Upload photo: </label>
-        <input id="person_photo" type="file" name="Photo of employee" >
+        <input class="form-control"  id="person_photo" type="file" name="Photo of employee" >
         
         
         <hr>
@@ -66,4 +87,6 @@
     <button type="button"><a href="/new_styled.html">Click Me!</a></button>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
 </html>
