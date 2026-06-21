@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Flexbox</title>
+
+    <style> 
+        .container{
+            display:flex; 
+            gap: 10px ; /*adds a gap between the different element of a container  */
+
+        }
+        .image-text{ 
+            float:right;
+            width:200px;
+        }
+
+        /*Styling for the container 2 example of flex direction*/
+        .red{background-color: red;}
+        .orange{background-color: orange;}
+        .yellow{background-color: yellow;}
+        .green{background-color: green;}
+        .blue{background-color: blue;}
+        .indigo{background-color: indigo;}
+        .violet{background-color: violet;}
+
+        .container2{
+            display: flex;
+            gap:10px; 
+        }
+        .container3{
+            display:flex; 
+            flex-direction: column; 
+            gap: 10px; 
+            height: 100px ;
+        }
+
+        .container4{
+            padding:2px; 
+            border:3px solid limegreen; 
+            color: antiquewhite;
+            margin-top: 100px; 
+            display:inline-flex; 
+            flex-direction: column;  
+        }
+        .container4 > div{ 
+            flex-basis: 100px;
+        }
+
+        .container5{
+            display:flex;
+        }
+        .container5 > .red{
+            order: 7;
+        }
+
+
+        .container6{
+            display: flex;
+            justify-content: center;
+        }
+        .conatiner6 > div{ 
+            width:80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FLEXBOX</h1>
+    <P>This page describes how we use the flex value of the siaply to adjust the css and the view of the website </P>
+    <div class="container">
+        <div class="one">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+
+        </div>
+
+
+        <div class="two">
+            <img src="https://loremipsum.imgix.net/5vCfGucT8waG1ErycNnTOo/c3277113e4a0bbe6e522813001653cf6/lorem-ipsum-generator-cicero-engraving.png?w=640&q=60&auto=format,compress" alt="Image of Ciero(The creator of Lorem Ipsum)" class="image-text">
+            
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?" </div>
+
+
+        <div class="three">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam minus repellat quae aperiam accusantium molestias quod rem ipsam doloremque ad magnam, fugit quidem impedit vitae consequatur incidunt distinctio asperiores! Dolorem!</div>
+    </div>
+
+    <h2>Flex Direction</h2>
+
+    <p>Set by default to row, the flex direction tells the containeralong which direction to flex the elements, i.e how to arrange the different elements of a container (row vise or column vise). Here is an example of the flex direction set to row and one's se to column.</p>
+
+    <div class="container2">
+        <div class="red">Red</div>
+        <div class="orange">Orange</div>
+        <div class="yellow">Yellow</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="indigo">Indigo</div>
+        <div class="violet">Violet</div>
+    </div>
+    <br> <br/>
+
+    <div class="container3">
+        <div class="red">Red</div>
+        <div class="orange">Orange</div>
+        <div class="yellow">Yellow</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="indigo">Indigo</div>
+        <div class="violet">Violet</div>
+    </div>
+
+    <br><br/>
+
+    <div class="container4">
+        <div class="red">Red</div>
+        <div class="orange">Orange</div>
+        <div class="yellow">Yellow</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="indigo">Indigo</div>
+        <div class="violet">Violet</div>
+    </div>
+
+    <h2>Flexbox container properties</h2>
+    <p>The properties that can be applied to the flex container or the container that is set to flex. 
+    <dl>
+        <dt>1. display</dt>
+        <dd> This property initializes the layout context. It defines whether the element behaves as a block or inline flex container.
+            <dd>flex: Activates a block-level flex container</dd>
+            <dd>inline-flex: Activates an inline-level flex container</dd>
+        </dd>
+
+        <dt>2. flex-direction</dt>
+        <dd>This property establishes the main axis, dictating the direction in which flex items are laid out. 
+            <br><b>row</b> (default): Left-to-right in standard English writing mode.
+            <br><b>row-reverse</b>: Right-to-left orientation.
+            <br> <b>column:</b> Top-to-bottom layout.column-reverse: Bottom-to-top layout.</dd>
+            <dt>3. flex-wrap</dt>
+            <dd>By default, flex items will force themselves onto a single line. This property controls whether items wrap into multiple lines.
+                <br> <b>nowrap</b> (default): All flex items stay on one single line. Not very useful as all the elements might not be visible to the user. 
+                <br> <b>wrap:</b> Container Items break onto multiple lines from top to bottom if space is insufficient. Important and useful. 
+                <br> <b>wrap-reverse: </b>Items break onto multiple lines from bottom to top.</dd>
+
+            <dt>4. justify-content</dt>
+            <dd>This property handles alignment along the main axis,(that is set to the x axis when the rox flex direction is taken and the y-axis when the column flex direction is take) distributing any remaining free space. It can have the following properties: 
+                <dd>flex-start (default): Items pack tightly toward the start edge of the container.</dd>
+                <dd>flex-end: Items pack tightly toward the end edge.</dd>
+                <dd><b>center:</b> Items center perfectly along the line</dd>
+                <dd>space-between: Items display with equal spacing; first and last items hug the outer edges and use up all the available space of the container. </dd>
+                <dd>space-around: Items display with equal space around them; outer margins are half the size of inner gaps.</dd>
+                <dd>space-evenly: Items display with identical spacing between them and the outer edges.</dd>
+            </dd>
+            Let us see an example of this: 
+            <div class="container6">
+                <div class="red">Red</div>
+                <div class="orange">Orange</div>
+                <div class="yellow">Yellow</div>
+                <div class="green">Green</div>
+                <div class="blue">Blue</div>
+                <div class="indigo">Indigo</div>
+                <div class="violet">Violet</div>
+            </div>
+            <br><br/>
+
+    </dl> 
+    </p>
+      
+    <h2>Flex Item Properties:</h2>
+    <p>The properties of the item contained inside a flex box or a flex container. Aka chil properties of a flex box</p>
+    <dl>
+        <dt>1. order</dt>
+        <dd>We assign certain number to the value of the order property that arranges the certain elements, according to the value of that property on a real line number. By default the order value is 0 but changing any of that say the value of order of the red container to any value gretaer than 0(assume 5) moves the element to the rightmost.</dd>
+        <br>
+        <div class="container5">
+        <div class="red">Red</div>
+        <div class="orange">Orange</div>
+        <div class="yellow">Yellow</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="indigo">Indigo</div>
+        <div class="violet">Violet</div>
+    </div>
+    </dl>
+
+    <br>
+    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Cheatsheet Link</a>
+
+
+
+    
+</body>
+</html>
