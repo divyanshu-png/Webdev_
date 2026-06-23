@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Attribute Demo</title>
+    <style>
+        /* Using the 'class' attribute for styling */
+        .highlight-box {
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-container" 
+         class="highlight-box" 
+         title="This is a container div" 
+         style="margin: 20px;">
+        
+        <h2>Learning Attributes</h2>
+
+        <p>Visit the <a href="https://www.google.com">Google homepage</a>.</p>
+
+        <img src="https://via.placeholder.com/150" 
+             alt="A placeholder gray square" 
+             style="display:block; margin-bottom:10px;">
+
+        <button onclick="alert('You clicked the button!')" 
+                onmouseover="this.style.backgroundColor='yellow'" 
+                onmouseout="this.style.backgroundColor=''">
+            Click or Hover Me!
+        </button>
+
+        <p>Try typing below to trigger an <strong>onkeydown</strong> event:</p>
+        <input type="text" onkeydown="console.log('A key was pressed!')">
+
+    </div>
+    <!--The whole body includes a single div tag that helps us understand that a single div in an html page doesn't occupy the whole area -->
+</body>
+</html>

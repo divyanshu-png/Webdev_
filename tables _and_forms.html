@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border=2px>
+        <caption>Information of developers</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+                <td>Delhi</td>
+            </tr>
+            <tr>
+                <td>Akash</td>
+                <td>29</td>
+                <td>Pune</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr aria-rowspan="3"> <td>"Last Updated on: 2026-05-19" </td></tr>
+        </tfoot>
+    </table>
+
+    <P> Form for filling in details of new developers</P>
+    <hr>
+    <form action="/file.php" method="post" >
+        <label for="Name">Name:</label> 
+        <input type="text" id="name" name="username" required><br><br>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="age" name="age of the developer" required><br><br>
+
+        <label for="City">City residing in:</label>
+        <input type="radio" id="Pune" name="City residing in" value="Pune">
+        <label for="Pune">Pune</label>
+        <input type="radio" id="Delhi" name="City residing in" value="Delhi">
+        <label for="Delhi">Delhi</label><br><br>
+
+        <label for="person_photo" >Upload photo: </label>
+        <input id="person_photo" type="file" name="Photo of employee" >
+        
+        
+        <hr>
+        <input type="checkbox" value="Accepting" name="T&C" required> <label for="T&C">Accepting the terms and conditions: The data entered by you is complete and true to your knowledge. If any alterations are to be required after form submission, contact the HR department</label>
+        
+        <br><hr>
+        <input type="submit" value="Submit"> <br><br>
+        <input type="reset" value="Clear the form">
+
+    </form>
+    <h3>Audio for captcha</h3>
+    <audio controls>
+        <source src="C:\Users\ME HP\Downloads\From_Household_Appliances_to_Global_Microservices.m4a" type="audio">
+    </audio>
+    <button type="button"><a href="/new_styled.html">Click Me!</a></button>
+
+</body>
+</html>
