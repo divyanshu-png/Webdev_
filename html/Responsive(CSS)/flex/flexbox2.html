@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox2</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+        .container > p{
+            border: 1px dashed lightcoral;
+            width: 100px;
+            flex-basis: 200px;/*As soon as we add the flex-basis it completely ignores the width and only focuses on the Flex-basis */ 
+            max-width: 100px;/*when we add the max-width, the CSS completely ignores the */ 
+            min-width: 300px;
+        }
+
+        .container2{
+            display: flex;
+            gap:10px; 
+        }
+        .container2 > p{
+            border: 1px dashed lightcoral;
+            flex-basis: 100px;
+            flex-grow: 1; /*Turning the flex grow value to on i.e. 1*/ 
+            flex-shrink: 0 ;
+        }
+
+        .container3{ 
+            display: flex;
+            gap:10px; 
+        }
+        .container3 > p {
+            border: 1px dashed lightcoral;
+            flex-basis: 100px;
+            flex-grow: 0;
+            flex-shrink: 1 ;
+        }
+
+
+        .color-container{ 
+            display: flex;
+            gap:2px; 
+        }
+        .red{
+            background-color: red;
+            flex:1; 
+        }
+        .blue{
+            background-color: blue;
+            flex: 2;
+        }
+
+        .green{
+            background-color: green;
+            flex: 3;
+        }
+    </style>
+</head> 
+<body>
+    <h1>FLEX SIZING</h1>
+    <div class="container">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact us</p>
+        <p>The Best Programming School in the world</p>
+    </div>
+
+
+    <H2>Flex-GROW AND Flex-SHRINK</H2>
+    <p>flex-grow and flex-shrink dictate how flexible items adjust their sizes when the container is larger or smaller than the combined size of the items. 
+        <b>flex-grow </b>handles extra empty space by expanding items, while <b>flex-shrink</b> handles a lack of space by shrinking items to prevent overflow even beyond the flex basis mentioned.</p>
+        <br><h4>Flex-grow</h4>
+    <div class="container2 ">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact us</p>
+        <p>The Best Programming School in the world</p>
+    </div>
+
+    <br><h4>Flex-shrink</h4>
+    <div class="container3">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact us</p>
+        <p>The Best Programming School in the world</p>
+    </div>
+
+    <p> We can write the flex-grow, shrink and basis value separated by space in the property "flex" itself as <br>
+    <code>flex: 1 1 0; </code> <br>
+ where the flex basis 0 mean that every value is set to equal flex-basis(width as in the row flex direction). We can futher shorten this and write the flex as simply 1 to make the same implementation. 
+ <br>Another example: 
+    </p>
+    <br>
+    <div class="color-container">
+        <div class="red">Red</div>
+        <div class="blue">Blue</div>
+        <div class="green">Green</div>
+    </div>
+
+</body>
+</html>

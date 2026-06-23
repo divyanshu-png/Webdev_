@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{ 
+            display: grid;
+            grid-template-columns: 1fr 2fr; /*Where the fr means frame ratio*/
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            margin: 20px;
+        }
+        .container > *{
+            border: 1px solid grey;
+            text-align: center;
+        }
+
+        .chess{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+            grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+            row-gap: 0px;
+            column-gap: 0px;
+            width: 400px;
+        }
+        .chess > .black{
+            background-color: black;
+            height: 50px;
+            width:50px; 
+        }
+        .chess > .white{
+            background-color: white;
+            height: 50px;
+            width:50px; 
+            border: 1px solid black; 
+        }
+
+        .grid-container{ 
+            display: grid;
+            grid-template-columns: 100px 500px;
+            grid-template-rows: 100px 200px;
+        }
+        .grid-item{
+            border: 2px solid red;
+            background-color: blue;
+        }
+
+        .grid-container2{ 
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 100px auto;
+        }
+
+        .grid-container3{
+            display: grid;
+            grid-template: 1fr 2fr/ 1fr 2fr;
+        }
+
+        .grid-container4{ 
+            display: grid;
+            grid-template-columns:200px minmax(400px, 800px);
+            grid-template-rows: 200px, 300px ;
+        }
+
+        .grid-container5{ 
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(2, 100px);
+        }
+
+        .grid-container6{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+        }
+        .grid-container7{ 
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(2, 100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde possimus similique blanditiis est esse maiores optio pariatur, odio quibusdam voluptatem nobis perspiciatis qui odit veniam nesciunt impedit at alias. Accusantium.</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+
+        <P>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</P>
+        <P>Creator of Lorem Ipsum<br>
+            <img src="https://loremipsum.imgix.net/5vCfGucT8waG1ErycNnTOo/c3277113e4a0bbe6e522813001653cf6/lorem-ipsum-generator-cicero-engraving.png?w=640&q=60&auto=format,compress" style="height:50px;" /></P>
+    </div>
+
+    <p>Any other content can then be placed here. Another example making the Chessboard</p>
+    <br>
+    <div class="chess">
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+
+        
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+
+        
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+
+        
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+
+        
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+
+        
+    </div>
+<br></br>
+
+<p>We can define the column and row size in fix that takes away the responsiveness and makes the element static to the given size for example </p>
+<br>
+
+<ul>
+    <li>Setting fix size in Pixels(px) or Points(pt) or rem. It can be also be done by using the grid-template property that takes the row and column sizes seperates by a forward slash(/). {row comes first}<br>
+        <code>grid-template:  100px 200px / 100px 500px </code>
+        <br>Example: 
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
+
+    </li>
+
+    <br>
+    <li>Using auto keyword ; that sets the width to the column to rest of the space left after we fix one column ; and for the row sets the height as the minimum required height of the characters inside each block/ grid-item. 
+        <br>
+        Example:
+        <div class="grid-container2">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
+    </li>
+    <li>Fractional size: Mostly used where we wish to arrange grid items in ratios , i.e wrt to each other. True responsiveness where when we decrease or increase the screen it breaks the width according to the screen width and the height relative to the content height.  <br>
+        Example: 
+        <div class="grid-container3">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
+    </li>
+    <li>minmax function to define the column width : the minmax takes 2 input i.e the minimum to which itll stay responsive or can be minimised and the maximum to which it'll be expanded.<br>
+        <div class="grid-container4">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
+    </li>
+    <li>Repeat function that defines how many times we need to repeat the grid-item that takes up the same size for all of the the rows and columns. 
+        <br>Example: 
+        <div class="grid-container5">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
+    </li>
+
+</ul>
+<hr>
+<p>(Q) What if we add more rows and columns than the items present in the container? : It simply takes up a format that leaves out space for the other elements. The item will flow and take up the next space in the next row, column </p>
+<div class="grid-container6">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+        </div>
+
+(Q) What happens if we don't define enough rows and columns? the extra element will try to take the width and set itself according to the column size and the row size/ height to the default character size. 
+<div class="grid-container7">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5 </div>
+        </div>
+We can add the grid-auto-rows and grid-auto-column to set the height and width of any other, any number of grid item that'll be added to the container. 
+
+ 
+
+</body>
+</html>
