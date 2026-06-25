@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .container > *{ 
+            background-color: blue;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .container-fluid > *{ 
+            background-color: blue;
+            color: white;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--Using the container class is a predefined layout in Bootstrap that centers, pads, and limits the maximum width of web content. The limit for the maximum width is based on a predefined manner on the width of the device being used. Other than contaniner we commonly use the container-fluid class on the parent div that tells that for each device we cover the full width avaialable -->
+    <div class="container">
+        <div class="row">
+            <!--the class row defines the items to be adjusted in a row with the same height and different column unit width according to each component -->
+            <div class="col-2">Menu</div>
+            <div class="col-4">Hello</div>
+            <div class="col-6">Main Content Of User</div>
+
+        </div>
+    </div>
+    <br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">Menu</div>
+            <div class="col-4">Hello</div>
+            <div class="col-6">Main Content Of User</div>
+
+        </div>
+    </div>
+
+    <p>Bootstrap Breakpoints are customizable predefined screen width that dictates how your website's layout and elements adapt to different devices. If you want a grid of columns to stack vertically on a phone but sit side-by-side on tablets and larger screens, you use a breakpoint infix like md. Other options include: <br> 
+        <img src="./image.png"><br>
+        that provide different functionality when dealing with different types of devices, enhancing responsiveness. 
+    </p>
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
