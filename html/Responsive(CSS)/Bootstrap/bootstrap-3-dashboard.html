@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <!--==========Navigation header=============-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            <!--TO insret an logo or image at the navigation bar we replace the content of the navbar-brand class element with an img tag-->
+            <a class="navbar-brand" href="#">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmXAD16LgWOcPJYW_pickcBBo8MhrnEgOdQeHBYqHGyCGIk1PcWSN9pXg&s=10"  style="height: 50px;"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-box-seam-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z"/>
+                </svg>
+                <b style="font-weight: 900;">Move-It</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./bootstrap-3.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./bootstrap-3-dashboard.html">Dasboard</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="link-bootstrap-3.html">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Pickup and Drop</a></li>
+                    <li><a class="dropdown-item" href="#">InterCity</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Postcode" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Check Avaialability</button>
+            </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--=========Dasborad Components=======-->
+
+    <!--We need to add a 6/3/3 layout add the map of india in one part and on the other part a dercription of the cities we work in.
+    The map stays onto the 6 parts of the screen and the 3 and 3 parts are occupied by cards of information such as -->
+
+    <div class="container-fluid">
+
+        <div class="row g-4">
+            
+            <div class="col-lg-4">
+                <div class="d-flex flex-column gap-3">
+                    
+                    <div class="card bg-season text-center p-3 shadow-sm">
+                        <div class="small opacity-75">Current Season</div>
+                        <h4 class="my-2">RMS (2026-2027)</h4>
+                        <h5>Wheat - Rabi</h5>
+                        <div class="small opacity-75 mt-2">04-Mar-2026 To 30-Jun-2026</div>
+                    </div>
+
+                    <div class="card p-3 shadow-sm text-center">
+                        <div class="text-danger small mb-2 fw-semibold">Click on State for State View</div>
+                        <div class="map-placeholder d-flex align-items-center justify-content-center">
+                            <span>[ Interactive Map Vector Goes Here ]</span>
+                        </div>
+                    </div>
+
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <div class="card p-2 text-center bg-white border shadow-sm">
+                                <div class="small text-muted">Procuring States</div>
+                                <strong class="fs-5">11</strong>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card p-2 text-center bg-white border shadow-sm">
+                                <div class="small text-muted">Procuring Districts</div>
+                                <strong class="fs-5">292</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row g-3">
+                    
+                    <div class="col-md-6">
+                        <div class="card metric-card bg-farmers p-3 shadow-sm">
+                            <h5 class="card-title d-flex align-items-center mb-3">👤 Number of Farmers</h5>
+                            <div class="row text-center mt-auto">
+                                <div class="col-6 border-end border-light border-opacity-25">
+                                    <div class="small opacity-75">Registered</div>
+                                    <div class="fs-4 fw-bold">51,26,858</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small opacity-75">Transacted</div>
+                                    <div class="fs-4 fw-bold">33,88,205</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card metric-card bg-procurement p-3 shadow-sm">
+                            <h5 class="card-title mb-3">🌾 Procurement (MTs)</h5>
+                            <div class="row text-center mt-auto">
+                                <div class="col-6 border-end border-light border-opacity-25">
+                                    <div class="small opacity-75">Estimated</div>
+                                    <div class="fs-5 fw-bold">3,55,33,000.00</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small opacity-75">Procured</div>
+                                    <div class="fs-5 fw-bold">3,49,51,872.64</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card metric-card bg-msp p-3 shadow-sm">
+                            <h5 class="card-title mb-3">🪙 MSP Payment (Rs. in Cr.)</h5>
+                            <div class="row text-center mt-auto">
+                                <div class="col-6 border-end border-light border-opacity-25">
+                                    <div class="small opacity-75">MSP Payable</div>
+                                    <div class="fs-5 fw-bold">61,994.94</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small opacity-75">MSP Paid</div>
+                                    <div class="fs-5 fw-bold">61,991.83</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card metric-card bg-transactions p-3 shadow-sm">
+                            <h5 class="card-title mb-3">🔄 Farmer's Transactions (No.)</h5>
+                            <div class="row text-center mt-auto">
+                                <div class="col-6 border-end border-light border-opacity-25">
+                                    <div class="small opacity-75">Transacted</div>
+                                    <div class="fs-5 fw-bold">33,88,205</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small opacity-75">MSP Paid To</div>
+                                    <div class="fs-5 fw-bold">27,07,543</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card metric-card bg-centres p-3 shadow-sm">
+                            <h5 class="card-title mb-3">🏢 Procurement Centres (No.)</h5>
+                            <div class="row text-center mt-auto">
+                                <div class="col-6 border-end border-light border-opacity-25">
+                                    <div class="small opacity-75">Planned</div>
+                                    <div class="fs-5 fw-bold">18,506</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small opacity-75">Transacted</div>
+                                    <div class="fs-5 fw-bold">14,882</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card metric-card bg-agencies p-3 shadow-sm">
+                            <h5 class="card-title mb-3">🏛️ Procuring Agencies (No.)</h5>
+                            <div class="row text-center mt-auto">
+                                <div class="col-6 border-end border-light border-opacity-25">
+                                    <div class="small opacity-75">Planned</div>
+                                    <div class="fs-5 fw-bold">37</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small opacity-75">Transacted</div>
+                                    <div class="fs-5 fw-bold">34</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="column col-lg-4 col-sm-6 p-4 m-4 contianer">
+      <div class="card text-center">
+        <h5>Hello Card Template</h5>
+        <div class="col-lg-6 col-sm-6">
+            <h4>Registrations</h4>
+            <p>344566</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <h4>Confirmations </h4>
+            <p>23445</p>
+        </div>
+      </div>  
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
