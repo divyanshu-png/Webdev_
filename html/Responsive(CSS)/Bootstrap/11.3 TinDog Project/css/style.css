@@ -20,6 +20,7 @@
   width: 3rem;
   height: 3rem;
   border-radius: 0.75rem;
+  background-color: aqua;
 }
 
 .profile-img {
@@ -32,4 +33,32 @@
 }
 .button-white{
   color:white;
+}
+
+#title {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+#title .gradient-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#title .hero-copy h1 {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+}
+
+#title .hero-copy p {
+  max-width: 42rem;
+}
+
+#title .btn {
+  min-width: 160px;
+}
+
+#testimonial{ 
+  background-color: lightcyan;
 }
