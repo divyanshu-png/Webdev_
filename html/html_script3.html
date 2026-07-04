@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/css_script3.css">
+</head>
+<body>
+
+    <h1>Javascript Basics</h1>
+
+    <h2>JavaScript Datatypes and operations on it </h2>
+    <p>Javascript uses a total of 7 Primitive and 1 Non-Primtive data types. The Primitive data types include: 
+        <ul>
+            <li>Number</li>
+            <li>String</li>
+            <li>Boolean: true and false vlaues: Everythign with a content is true and everything empty is false</li>
+            <li>Null: used to represent intentional absence of any object value.</li>
+            <li>Undefined:  a variable being declared but hasn't beeen assigned a vlaue is considered as an undefined type.</li>
+            <li>Symbol: Unique and unchangeable property identifiers.</li>
+            <li>BigInt: Integers too large for the standard Number type. Represented by addingg a 'n' to the end of the number or using the BigInt constructor. </li>
+        </ul>
+    The non-primitive data-type includes the : <br>
+    <span>object:</span> Collections of key-value pairs or complex data. Another subtype commonly used is Array. The string, number and Boolean datatype can be created using the new constructor (String, Number, Boolean). Also we can use the BigInt() constructor with a string to declare a bigint. 
+    </p>
+
+    <h3>(A)Numbers: Operations and Functions</h3>
+    <button id="click">Click for results</button>
+    <p>We are first of all learnign aboutthe basic operations in JS. We study about the basic addition. We use the keywords let, const and var(non-block scoped) to declare a variable. Here we take two Number Datatype variables x and y: <br>
+    let x= 1234;<br>
+    let y= 45660; <br> </p>
+    <br>
+    <p id="type"></p>
+    <ul>
+        <li>Addition: <span id="addition"></span> </li>
+        <li>Subtraction: <span id="subtraction"></span></li>
+        <li>Division: <span id="division"></span> </li>
+        <li>Multiplication: <span id="multiply"></span> </li>
+        <li>Exponentiation : <span id="exponent"></span> </li>
+        <li>Modulo/Remainder : <span id="remainder"></span> </li>
+        <li>Increment (x++) : <span id="increment"></span> </li>
+        <li>Decrement(x--) : <span id="decrement"></span> </li>
+        <li>Augmented assigment example (y+=x) : <span id="augmented"></span></li>
+        <li>Comparision operator(y>x) : <span id="lessthan"></span> </li>
+        <li>Comparision operator(y===x) : <span id="exactlyequal"></span> </li>
+
+    </ul>
+    <p>Similarly the number data type can also represent the decimal numbers and the same operations can be performed on them. Here we let two floating numbers as: <br>
+        let a= 1234.23; <br> 
+        let b= 45660.455667; 
+    </p>
+    <p id="type2"></p>
+    <ul>
+        <li>Addition: <span id="addition2"></span> </li>
+        <li>Subtraction: <span id="subtraction2"></span></li>
+        <li>Division: <span id="division2"></span> </li>
+        <li>Multiplication: <span id="multiply2"></span> </li>
+        <li>Exponentiation : <span id="exponent2"></span> </li>
+        <li>Modulo/Remainder : <span id="remainder2"></span> </li>
+        <li>Increment (x++) : <span id="increment2"></span> </li>
+        <li>Decrement(x--) : <span id="decrement2"></span> </li>
+        <li>Augmented assigment example (y+=x) : <span id="augmented2"></span></li>
+        <li>Comparision operator(y>x) : <span id="lessthan2"></span> </li>
+        <li>Comparision operator(y===x) : <span id="exactlyequal2"></span> </li>
+
+    </ul>
+    <p>Other function rather than operations that can be utilised on the number type variable are: </p>
+
+    <ul>
+        <li>Constructor : Returns the functon that created the JavaScript's Number Protoype. We can also access the prototype and edit and add functions as well of the number.
+            <br>The Constructor of the number x is given as: 
+            <span id="constructor"></span>
+        </li>
+        <li>Number.isFinite(num) method:Returns a true or false based onn whether the number is finite or not:  <span id="isFinite"></span></li>
+        <li>Number.parseInt(str) : Especially useful for forceful typecasting, converting the user input from string to integer.
+            <br>
+            <span id="parseInt"></span>
+        </li>
+        <li>Number.parseFloat(str): Converts the given string to the float value. <br>
+            <span id="parseFloat"></span>
+        </li>
+        <li>num.toExponential(x): Converts a number to the mathematical exponent format. The x denotes : <br>
+        <span id="toExp"></span>
+    </li>
+    <li>num.toFixed(digits): fixes the number of fixed-point notation to the given number of digits:
+        <br>
+        <span id="toFixed"></span>
+    </li>
+    </ul>
+
+
+    <p>Other ways of output to user and then output to the programmer include the window.alert() and the console.log(). This is specially useful when to display somemessage over acheiving or any task completion.</p>
+    <button id="alert">Click me to alert</button>
+
+    <h3>(B) String</h3>
+    <button id="clickStr">Click for results</button>
+
+    <p>Strings are a sequence of characters enclosed within single or double qoutes- treated equally or even backticks in the newer versions of JS.JS  also allows for multiline strings with the help of backticks, and various inbuilt methods. :<br>
+        Let us consider and work on the string:<br>
+        sampleStr = "i am divyanshu singh! Hello world"
+    </p>
+   <ul>
+        <li>Length :<span id="length"></span></li>
+        <li>toUpperCase(): <span id="toUpper"></span></li>
+        <li>toLoweCase(): <span id="toLower"></span></li>
+        <li>.replace(searchValue, replaceValue):  finds and replaces the subtrings or a pattern matching it first in the given string. <br>
+            <span id="replace"></span>
+        </li>
+        <li>.replaceAll(searchValue, replaceValue):  finds and replaces All the subtrings or a pattern matching it the given searchValue in the given string. <br>
+            <span id="replaceAll"></span>
+        </li>
+        <li>slice(startIndex, endIndex): Slices a substring from the given start index to the charcter at the index just before the end index: Here we intend to extract the first 8 charcters of the string:
+            <br>
+            <span id="slice"></span>
+        </li>
+
+        <li>substring finding: substring(): Extracts the substring between two specified indices. THe core difference between the slice and substring is :
+            <ol>
+                <li>If start> end the slice returns an empty string but the substring automatically replaces the two arguments.</li>
+                <li>if a negative index is passed, the slice considers the negative indexing, whereas thes subtring considers any negative value as 0-the starting index</li>
+                <li>Slice works both with strings and arrays whereas the substring works only with the strings</li>
+            </ol>
+            <span id="substring"></span>
+        </li>
+        <li>trim(): Returns a string with removed whitespaces. The string "  Helloo!    " gets converted to: <br>
+            <span id="trim"></span>
+        </li>
+        <li>startsWith(): Checks if a string starts with a particular subtring or not and returns a boolean value:<br>
+            <span id="startsWith"></span>
+        </li>
+   </ul>
+
+
+   <h3>(C)Null, Boolean, Undefined, BigInt</h3>
+   <button id="nbub">Click for results</button>
+   <P>The different null dataype can be used to represent the absence of a value, the Boolean in very useful as a return value of many functions and in conditionals as well. Here we take the following values and check their type: <br>
+    let x= null;<br>
+    let y; <br>
+    let z = true; <br>
+    let numBig = 1234556788907653n;<br>
+
+    <ol>
+        <li><span id="null"></span></li>
+        <li><span id="boolean"></span></li>
+        <li><span id="undefined"></span></li>
+        <li><span id="bigint"></span></li>
+    </ol>
+   </P>
+
+
+   <h3>(D)Loops and Conditions: </h3>
+   <button id="clickCondition&Loops">Click for results</button>
+   <p>As any other programming language requires, the basic consitional execution and loops are used in JS. The syntax is quite similar to the java statements and is used with the form validation and handling user authentication. Let us try to understand the loops and conditionals using numbers and strings.</p>
+
+   <ol>
+    <li> <h4>Conditonals - if, if-else, if-else if- else, swithcase, etc</h4>
+        Let us consider the string : sampleString = "Divyashu Singh is learning!" and a variable holding value 123456. 
+        <ul>
+            <li>if-else if- else loop: if value>100000 then print Greater than a million! large sum otherwise if greater than 10000 print large sum otherwise small amount! : <br>
+                <span id="if"></span>
+            </li>
+            <li>switch-case: Returns different values based on diffferent cases of the swtich parameter input:<br>
+                <span id="switchCase"></span>
+            </li>
+        </ul>
+    </li>
+    <li> <h4>for loops</h4>
+        Usually used when we need to iterate over something.   
+        Let us consider the same string and return each characters in that string. Also logging the messages of variable value i in the console: <br>
+        <span id="for"></span>
+
+        <h4>while loops</h4>
+        Usually used when we need to check against a state in the code. <br>
+        let us consider an number log its value in the console until it reaches 10: and return a completion message!<br>
+        <span id="while"></span>
+
+        <h4>do while loops</h4>
+        for the same function let us see how this works out for tha values of i arranged in the range of 0 to 10:<br>
+        <span id="doWhile"></span>
+
+        <hr>The main difference between the do while and while loop is that the dowhile loop iterates atleast a single time even if the conditon is false because it operates before checking the condition. 
+        <h4>Special loops: for in and for-of loop</h4>
+        the for-in loop is used to iterate threought the propertiews of an object ,  whereas the for-of loop is used with an array, string , map or set. 
+    </li>
+   </ol>
+
+
+   <h3>(E)Data Strucutres in JavaScript </h3>
+   <button id="DSinJS">CLick for changes</button>
+   <p>JavScript supports 5 native data structures used to store complex data structures. 
+    <ul>
+        <li> <h4>(a)Objects</h4>
+            <P>Key-value pair where the keys are strings or symbols and it is best for unstrucutred data. Here we are considering an object given as :<br> let obj1 = {name: "Divyanshu" , age: 20, id: 12345}; <br> then 
+                <span id="objects"></span>
+            </P>
+
+        </li>
+        <li><h4>(B)Lists aka arrays </h4>
+        
+        </li>
+        <li><h4>(c)Maps</h4>
+            <p></p>
+        </li>
+        <li><h4>(d)Sets</h4>
+        </li>
+
+    </ul>
+   </p>
+
+
+   <h3>(F)Fucntions in JS </h3>
+   <button id="Functions">CLick for changes</button>
+   <P>Functions in JS can be defined using either of the three ways and all three behave differently in terms of thier use-cases.</P>
+   <!-- <span id=" "></span> -->
+    <ol>
+        <li>Function definiton
+            <p>Hoisted(conceptually moving to the top of where they are declared in) to the top of their scope, meaning they can be called before they are defined in the code.</p>
+            <pre>
+                function fizzBuzz(){
+                    let output= []; 
+                    for(let i =1 ; i<=100; i++){
+                        if(i%3===0 && i%5===0){output.push("FizzBuzz");}
+                        else if(i%5===0){output.push("Buzz");}
+                        else if(i%3===0){output.push("Fizz");}
+                        else{output.push(i);}  
+                    }
+                    console.log(output)
+                }
+
+                fizzBuzz();
+            </pre>
+            <p>Result: <span id="functionDefinition"></span> </p>
+        </li>
+        <li>Fucntion Expression: 
+            <p>Assigned to a variable. They are not hoisted in the same way as declarations (they follow the hoisting rules of the variable declaration like let, const, or var).</p>
+            <pre>
+                const add = function(a,b,c){return a+b+c;}
+                const calcAge = function(birthYear){
+                    const currentYear = new Date().getFullYear(); 
+                    return currentYear - birthYear; 
+                }
+
+                let z= add(2,3,4);
+                console.log(z); 
+                let age = calcAge(2006); 
+                console.log(age);
+            </pre>
+            <p>Result: <span id="functionExpression"></span> </p>
+        </li>
+        <li>Arrow Fucntions 
+            <p>A shorter syntax for writing functions. Crucially, they do not have their own this context (they inherit this from the enclosing lexical scope) and do not have an arguments object.</p>
+            <pre>
+                const multiply = (a, b) => a * b;
+                multiply(3,4); 
+            </pre>
+            <p>Result: <span id="functionArrow"></span></p>
+        </li>
+        <li>Anonymous Fucntions
+            <p>Functions without a name. Often used as callbacks or inside IIFEs.</p>
+            <pre>
+                setTimeout(function() {
+                    return ("Executed after 1 second");
+                }, 1000);
+
+            </pre>
+            <p>Result: <span id="functionAnonymous"></span></p>
+
+        </li>
+        <li>IIFEs(ImmediateLY Invoked Function Expression)
+            <p>Functions that run as soon as they are defined. Used to create a private scope and avoid polluting the global namespace.</p>
+            <pre>
+                (function() {
+                    console.log("IIFE executed!");
+                })();
+            </pre>
+            <p>Result: <span id="functionIIFE"></span></p>
+
+        </li>
+        <li>Generator Function
+            <p>Functions that can be paused and resumed using the function* syntax and the yield keyword. They return an Iterator object.</p>
+            <pre>
+                function* countUp() {
+                    yield 1;
+                    yield 2;
+                    yield 3;
+                }
+            </pre>
+
+        </li>
+    </ol>
+
+    <script src="/js/script3.js" defer></script>
+</body>
+</html>
