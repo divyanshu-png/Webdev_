@@ -197,3 +197,45 @@ Intl.DateTimeFormat();
     3) other Web APIs 
 */ 
 
+// BOM -Browser Object Model
+
+window.prompt("What is your name");
+window.CSSAnimation();
+//var CSSAnimation: {
+//  new (): CSSAnimation;
+//  prototype: CSSAnimation;
+// }
+
+// The CSSAnimation interface of the Web Animations API represents an Animation object.
+
+navigator.geolocation.getCurrentPosition();
+
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+function success(pos) {
+  const crd = pos.coords;
+
+  console.log("Your current position is:");
+  console.log(`Latitude: ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+history.back(); 
+//Session history of the tab. Used for back/forward and — crucially —
+// pushState/replaceState in SPA routing (React Router, etc.)
+
+screen.height(); 
+//Physical screen properties — analytics, positioning popups, responsive logic. 
+
+
