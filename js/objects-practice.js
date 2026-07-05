@@ -128,7 +128,72 @@ for(let keys of Object.keys(fruits)){
 }
 
 let text = JSON.stringify(user1); 
+console.log(text) ; 
 
 
+//Constructor Function
+// special functions used to create objects;
 
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+  this.nationality = "English";// default values to property
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+const myFather = new Person("John", "Doe", 50, "blue");
+myFather.nationality = "India"; //Changing the deafault nationality specified in the defination of object 
+let myMother = new Person ("Maya","Opus", 50, "black"); 
+
+//To add a new property, you must add it to the constructor function prototype:
+Person.prototype.changeName = function (name) {
+  this.lastName = name;
+}
+myMother.changeName("Doe");
+
+
+// ---JavaScript has built-in constructors for all native objects://
+
+let obj1= new Object()   // A new Object object
+let userArr = new Array()    // A new Array object
+let mapping = new Map()      // A new Map object
+set = new Set()      // A new Set object
+dateToday = new Date()     // A new Date object
+re= new RegExp()   // A new RegExp object
+new Function() // A new Function object
+new Error("Something Went Wrong!") // A new Error object 
+//there are many more types of error objects 
+
+new Number(12345678978); 
+new String(); 
+
+// Structured DataObjects- designed to manage data buffers and serialization.
+new ArrayBuffer(); 
+// ArrayBuffer: Generic fixed-length raw binary data buffer container.
+new SharedArrayBuffer(); 
+// SharedArrayBuffer: Shared memory binary data buffer container.
+new DataView() ; 
+// DataView: Low-level interface to read/write numeric types.
+
+//There are other built in objects offered by JS, ones that do not require the new keyword: those are as follows  :
+
+JSON(); 
+// JSON: Static namespace object for JSON parsing/stringifying, never use new with json
+Math(); 
+//Static utility object (not a constructor — never use new). Everyday math: rounding, powers, trigonometric functions, random numbers.
+Intl(); 
+//Internationalization: Objects providing locale-specific linguistic text and number sorting.
+Intl.DateTimeFormat();  
+//Locale-sensitive date and time formatting tool.
+
+
+/* WEB HOST OBJECTS 
+    1) BOM -Browser Object Model
+    2) DOM- Document Object Model
+    3) other Web APIs 
+*/ 
 
