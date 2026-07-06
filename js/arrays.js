@@ -186,4 +186,73 @@ points.sort(function(a, b){return a - b});
 // and points[points.length-1] contains the highest value
 
 
+const numbers  = [1,2,2,33,4,5,66,45,76,256]; 
+const numbers2 = numbers.map(myFunction2); 
+function myFunction2(value, index, array){
+    return value*2; 
+}
+
+
+const myArr = [1, 2, 3, 4, 5, 6];
+const newArr = myArr.flatMap(x => [x, x * 10]);
+
+
+// .filter() method
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+//reduce method 
+//The reduce() method runs a function on each array element to produce a single value.
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+//reduceRight()
+// similar to reduce we have reduceRight that works from right to left 
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduceRight(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+//every() checks if all the elements in an array follow a certain functions or criteria
+let allOver18 = numbers.every(myFunc);
+function myFunc(value){
+    return value>18; 
+}
+//some() checks if some values/elements of the array are greater than a given value 
+let someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+
+//Array.from(dsvksg) ; returns an array from the given string, number, or array along witha ny specified function
+
+let arrStr = Array.from("Hello Friends!"); // returns ['H', 'e', 'l', 'l', 'o', ' ', 'F', 'r', 'i', 'e', 'n', 'd', 's', '!']
+
+let arrayFromArray = Array.from([1,2,3,4,5], x=>x*2); //returns  [2, 4, 6, 8, 10]
+
+
+//The ... operator expands an array into individual elements
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const arr3 = [...arr1, ...arr2]; // returns [1, 2, 3, 4, 5, 6]
+
+//The spread operator (...) can be used to copy an array:
+const arr4= [...arr1]; 
+let a, b, rest;
+const arr1 = [1,2,3,4,5,6,7,8];
+
+[a, b, ...rest] = arr1;
 
