@@ -153,6 +153,17 @@ multiply(3,4);
 
 // A shorter syntax for writing functions. Crucially, they do not have their own this context (they inherit this from the enclosing lexical scope) and do not have an arguments object.
 //are not used as much but with dom manipulation 
+const result = (num) =>{
+    if(num>100){
+        return "Greater than 100"; 
+    }
+    else{
+        return "Less than 100";
+    }
+}
+let rs = result(150); 
+console.log(rs); 
+
 
 //Anonymous functions
 //functions without a name. Often used as callbacks or inside IIFEs
