@@ -1,4 +1,5 @@
 //An Array is an object type designed for storing data collections.
+//Collectively Array and TypedArray are called Indexed Collections 
 
 // Key characteristics of JavaScript arrays are:
 

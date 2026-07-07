@@ -1,3 +1,5 @@
+//Collectively the set, weakset, map and weakmap are called Keyed Collections 
+
 //A JavaScript Set is a collection of unique values.Each value can only occur once in a Set. The values can be of any type (heterogenous), primitive values or objects.
 
 //creating a set 

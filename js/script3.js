@@ -257,3 +257,24 @@ document.getElementById("Functions").addEventListener("click", function(){
 
 
 })
+
+document.getElementById(); // returns an "Element object" representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
+//returns null data type if there's no matching id for the specified element 
+document.getElementsByClassName(); 
+//method of Document interface returns an array-like object called an "HTML Collection", of all child elements which have all of the given class name(s).
+
+document.getElementsByName(); //method of the Document object returns a "NodeList Collection" of elements with a given name attribute in the document.
+
+document.getElementsByTagName(); //returns an HTMLCollection of elements with the given tag name
+
+document.querySelector(); // Returns the first instance of the Element object that is a descendant of node that matches the CSS selectors or a single selector. Returns null if no matches are found 
+
+document.querySelectorAll(); //Returns all element descendants of node that match selectors in the form of a NodeList collection . 
+
+
+/*\
+DOM Specific Collections : 
+When working with the browser DOM, JavaScript also utilizes specific web API collections:
+HTMLCollection: A live, array-like list of HTML elements returned by methods like getElementsByTagName. 
+NodeList: A collection of DOM nodes returned by methods like querySelectorAll
+\*/
