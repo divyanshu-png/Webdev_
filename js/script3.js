@@ -69,6 +69,7 @@ document.getElementById("nbub").addEventListener("click", ()=> {
     let y; 
     let z = true; 
     let numBig = 1234556788907653n; 
+    //NaN is the only JavaScript value that is not equal to itself.
 
     document.getElementById("null").innerHTML = "The type of function on x returns: "+ typeof x; 
     document.getElementById("undefined").innerHTML = "The type of function on y returns: "+ typeof y; 
