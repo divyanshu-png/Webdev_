@@ -22,7 +22,6 @@ A Simple Debugging Checklist
 
 //CONSOLE
 
-
 console.log("Used to print values to see what the program is doing and returning to check if an error exists");
 
 console.error("This is an error message! "); //used to display error messages
@@ -37,4 +36,18 @@ let users = [
 ];
 
 console.table(users); //prints out the data in tabular format
+
+//BREAKPOINTS 
+//In the debugger window, you can set breakpoints in the JavaScript code.
+//At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values.
+//After examining values, you can resume the execution of code (typically with a play button)
+
+//DEBUGGER KEYWORD
+//The debugger keyword stops the execution of JavaScript, and calls (if available) the debugging function.
+
+let y =3;
+let x= y*15;
+debugger; 
+console.log("After Debugger!")
+
 
