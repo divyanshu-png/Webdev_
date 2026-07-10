@@ -279,3 +279,4 @@ When working with the browser DOM, JavaScript also utilizes specific web API col
 HTMLCollection: A live, array-like list of HTML elements returned by methods like getElementsByTagName. 
 NodeList: A collection of DOM nodes returned by methods like querySelectorAll
 \*/
+
