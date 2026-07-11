@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Changing the CSS of the Elements by JS </title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+        .yellow-background{
+            background-color: yellow;
+        }
+        .huge{ 
+            font-size: 10rem;
+            font-weight: 800;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <br> 
+    <a href="https://www.google.com">Google</a>
+    <input type="checkbox" id="checkBox">
+    <button class="btn">Click me!!</button>
+
+    <ul id="list">
+        <li class="item"><a href="www.google.com">First</a></li>
+        <li class="item">Second</li>
+        <li class="item">Third</li>
+    </ul>
+
+    <p id="result"></p>
+    <p id="result2"></p>
+
+    <script>
+        const btn = document.querySelector(".btn"); 
+        const listEle = document.querySelector("a");
+        const result = document.getElementById("result"); 
+        const result2 = document.getElementById("result2"); 
+        btn.addEventListener("click", ()=>{
+            btn.classList.toggle("yellow-background"); 
+            listEle.classList.toggle("invisible"); 
+            document.querySelector("h1").classList.add("huge"); 
+            result.innerText = document.querySelector(".item").innerHTML;
+            result2.innerText = document.querySelector(".item").innerText;   
+        });
+        //seperation of concerns was achieved as the styles were taken care of by the stylesheet itself
+    </script>
+</body>
+</html>

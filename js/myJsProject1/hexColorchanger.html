@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEX Color Changer</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>HEX Color Changer</h1>
+    <p>Type any 6 number(0-9) or letters (A TO F) from your keyboard and find out the unique color. <br>PS: According to the mathematics we can have 5005 color points from the hexadecimal code</p>
+    <br>
+    <label for="colorScheme">Color Your Pallet:  </label>
+    <input type="text" id="colorScheme" placeholder="Enter the Code">
+    <input type="submit" id="enter">
+
+    <P id="result">Your color is </P>
+
+    <script type="module">
+
+        // Browsers only allow `import` inside ES modules. Also replace the bare
+        // package name with a CDN ESM entry so the browser can fetch it directly.
+        import { GetColorName } from "https://unpkg.com/hex-color-to-color-name?module";
+
+        document.getElementById("enter").addEventListener("click", () => {
+            let colorBody = document.getElementById("colorScheme").value;
+            console.log(colorBody);
+            colorBody = colorBody.toUpperCase();
+            const result = document.getElementById("result");
+            document.body.style.backgroundColor = "#" + colorBody;
+            result.innerHTML += "<b>" + GetColorName("#" + colorBody) + "</b>"
+        });
+
+    </script>
+    
+</body>
+</html>
