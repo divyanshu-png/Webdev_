@@ -88,7 +88,7 @@ myArray.pop(); //removes the last element or the element at the last index and r
 myArray.shift(); //removes the first element or the element at 0th index and then again shifts the elements forward by a single index value one
 
 //at() method
-let fruit = fruits.at(2); //returns the element , here strig stored at the 2nd index of the array 
+let fruit = fruits.at(2); //returns the element , here string stored at the 2nd index of the array 
 
 // how to confirm if the given object is an array 
 Array.isArray(fruits);//returns a boolean value 
@@ -256,4 +256,10 @@ let a, b, rest;
 const arr1 = [1,2,3,4,5,6,7,8];
 
 [a, b, ...rest] = arr1;
+
+
+//Destructiong Values in an array 
+let user = [19, "Divyanshu"];
+const [age, name] = user; 
+console.log(age)
 

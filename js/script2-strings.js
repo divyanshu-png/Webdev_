@@ -65,3 +65,17 @@ function bigCounter(){
         return count; 
     }
 }
+
+
+//template strings
+//Using Backticks 
+let userAge = 20 
+let text = `Hello User. Your age is ${userAge}`; 
+console.log(text); 
+
+let secondaryText = `Hello!
+This is a multiline Text.
+My name is Divyanshu. This is getting printed as it is. 
+The enter escape sequnce is not formatted
+`; 
+console.log(secondaryText);
