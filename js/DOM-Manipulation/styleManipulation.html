@@ -42,6 +42,8 @@
         btn.addEventListener("click", ()=>{
             btn.classList.toggle("yellow-background"); 
             listEle.classList.toggle("invisible"); 
+            //can use classList.add(""); to permanently add the class from the DOM node 
+            //can use the classList.remove(""); to permanently remove the class from the DOM node 
             document.querySelector("h1").classList.add("huge"); 
             result.innerText = document.querySelector(".item").innerHTML;
             result2.innerText = document.querySelector(".item").innerText;   

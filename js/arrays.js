@@ -187,11 +187,32 @@ points.sort(function(a, b){return a - b});
 // and points[points.length-1] contains the highest value
 
 
+//MAP FUNCTION  
+// map() creates a new array from calling a function for every array element.
+// map() does not execute the function for empty elements.
+// map() does not change the original array.
+
+/*
+Parameter	    Description
+function()	  Required. A function to be run for each array element.
+currentValue	Required.The value of the current element.
+index	        Optional.The index of the current element.
+arr	          Optional.The array of the current element.
+thisValue	    Optional. Default value undefined. A value passed to the function to be   used as its this value.
+*/
+
 const numbers  = [1,2,2,33,4,5,66,45,76,256]; 
 const numbers2 = numbers.map(myFunction2); 
-function myFunction2(value, index, array){
+function myFunction2(value){
     return value*2; 
 }
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+
+function myFunction(num) {
+  return num * 10;
+}
+
 
 
 const myArr = [1, 2, 3, 4, 5, 6];

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="checkCookies()">
+    <p id="calender"></p>
+    <p id="clock"></p>
+    <button id="btn">Click me for message</button>
+
+    <p id="demo2"></p>
+
+    <div id="myDiv"><p id="myP">Click this Paragraph</p></div>
+
+    <script>
+
+        /*
+        The setInterval() method calls a function repeatedly, after every specified time quantum expires
+        */
+        // Call showTime every 1000 millisec that makes it look like a real clock 
+        setInterval(() => {
+            const d  = new Date(); 
+            document.getElementById("clock").innerHTML = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds(); 
+        }, 1000);
+        //calls the fucnction every day that changes the date every day 
+        setInterval(() => {
+            const d  = new Date(); 
+            document.getElementById("calender").innerHTML = d.getDate()+"/"+ (d.getMonth() +1)+ "/"+ d.getFullYear(); 
+        }, );
+        //or 
+        // Call showTime every 1000 millisec
+
+        /*
+        The setTimeout() method executes a function after a delay in milliseconds.
+        */
+        // let btn listen for a click
+        document.getElementById("btn").addEventListener("click", function () {
+            // Then call showMsg after 5 seconds
+            setTimeout(showMsg, 5000);
+        });
+
+        // Function to display message
+        function showMsg() {
+        document.getElementById("demo2").innerHTML = "Hello after 5 seconds!";
+        }
+
+
+        //Additonally clearTimeout()=>Clears a timeout and clearInterval()=>Clears an inteval
+
+
+
+        function checkCookies() {
+            let text = "";
+            if (navigator.cookieEnabled == true) {
+                text = "Cookies are enabled.";
+            } else {
+                text = "Cookies are not enabled.";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+        //EVENT PROPAGATION 
+        //Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element's "click" event should be handled first?
+
+        //There are two ways of event propagation in the HTML DOM, bubbling and capturing.
+/*
+In bubbling the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, then the <div> element's click event.
+
+In capturing the outer most element's event is handled first and then the inner: 
+the <div> element's click event will be handled first, then the <p> element's click event.
+    With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:
+
+        addEventListener(event, function, useCapture);
+    
+The default value is "false", which will use the bubbling propagation, when the value is set to "true", the event uses the capturing propagation.
+
+*/
+    document.getElementById("myP").addEventListener("click", myFunctionP, true);
+    document.getElementById("myDiv").addEventListener("click", myFunctionD, true);
+
+    function myFunctionP(){
+        alert("Welcome to the Screen by Paragraph"); 
+    }
+    function myFunctionD(){
+        alert("Welcome to the screen by Div"); 
+    }
+
+    </script>
+</body>
+</html>

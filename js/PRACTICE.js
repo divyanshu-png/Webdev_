@@ -1,23 +1,27 @@
 const nums = [10, 2, 50, 5, 50, 1, 106, 66, 11, 3, 70, 4];
 
+//1. Find array in ascending order 
 const ascendingNums = nums.toSorted((a, b) => a - b); 
-const descendingNums = nums.toSorted((a,b)=> b-a); 
+console.log(ascendingNums);
 
-console.log(ascendingNums); 
+//2. Find array in descending order 
+const descendingNums = nums.toSorted((a,b)=> b-a);  
 console.log(descendingNums); 
 
-//array to an object with Id and item feilds where id is auto incrementing 
-
-const objectNums = nums.map((element, index) => ({
-  id: index + 1,
-  item: element
-}));
-
+//3.  array to an object with Id and item feilds where id is auto incrementing 
+//basically a map with an index and value 
+const objectNums = nums.map((element, index) => (
+    {
+        id: index + 1,
+        item: element
+    }
+));
 console.log(objectNums);
 
 //No.3 in ascending and descnding
-console.log(ascendingNums[2]);
-console.log(descendingNums[2]); 
+const ascObjectNums = objectNums.toSorted((a, b) => a.item - b.item);
+const descObjectNums = objectNums.toSorted((a, b) => b.item - a.item);
+
 
 //remove first two elements in the ARRAY 
 let dummyArray = nums.slice(0, nums.length); 
@@ -77,15 +81,15 @@ typeof(userString[-1]);
 
 //12.	Identify the characters on either side of : in the given string.
 
-seperatedString = userString.split(":");//returns an array of the string on either side of the element i.e : 
+const seperatedString = userString.split(":");//returns an array of the string on either side of the element i.e : 
 
 //13.	Add * before and after # in the given string.
-newString = "*"+userString+"#"; 
+const newString = userString.substring(0 , userString.indexOf("#"))+ "*#*"+  userString.substring(userString.indexOf("#") +1) ; 
 
 //14.	Remove # and all the characters after it from the given string.
 
-let z = userString.indexOf("#")
-modifiedString = userString.substring(0, z); 
+let z = userString.indexOf("#");
+const modifiedString = userString.substring(0, z); 
 
 //15.	find out the RMS, 2026-2027, 1, 2 from the given string. 
 
@@ -96,9 +100,9 @@ console.log(userString.indexOf("/2"));
 
 
 //16.	Add /RMS/2026-2027/1/2 to the beginning and remove to last of the given string.
-newString2 = "/RMS/2026-2027/1/2"+ userString.replace("/RMS/2026-2027/1/2", "")
+const newString2 = "/RMS/2026-2027/1/2"+ userString.replace("/RMS/2026-2027/1/2", "")
 
 
 //17.	Generate a comma-separated string from the characters of the given string.
-commaSeperatedChars = userString.split(""); 
+let commaSeperatedChars = userString.split(""); 
 

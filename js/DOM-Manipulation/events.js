@@ -1,3 +1,4 @@
+//this is a load event, basically working when the DOM loads
 document.addEventListener("DOMContentLoaded", ()=>{
     
     document.getElementById("changes").addEventListener("click", function(){
@@ -25,3 +26,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 }); 
+
+//similar to the DOM load we can create a window load and specfic element based load events that follow the same syntax of adding an event listener and 
+
+const img = document.getElementById("myImg"); 
+img.addEventListener("load", function () {
+  document.getElementById("demo").innerText = "Image loaded!";
+});
+
+
