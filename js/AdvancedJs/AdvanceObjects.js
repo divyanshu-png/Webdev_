@@ -145,3 +145,135 @@ const person8 = {
 }
 
 person8.lang = "en"; 
+
+//another way of defining the object's get and set properties is via the defineProperty() method 
+
+
+const obj = {counter : 0};
+
+// Define setters and getters
+Object.defineProperty(obj, "reset", {
+  get : function () {this.counter = 0;}
+});
+Object.defineProperty(obj, "increment", {
+  get : function () {this.counter++;}
+});
+Object.defineProperty(obj, "decrement", {
+  get : function () {this.counter--;}
+});
+Object.defineProperty(obj, "add", {
+  set : function (value) {this.counter += value;}
+});
+Object.defineProperty(obj, "subtract", {
+  set : function (value) {this.counter -= value;}
+});
+
+// Play with the counter:
+obj.reset;
+obj.add = 5;
+obj.subtract = 1;
+obj.increment;
+obj.decrement;
+
+//G. JavaScript Object Management
+
+/* There are multiple methods that can be used for the Property Managemenmt of an object 
+
+    // Adding or changing an object property
+    Object.defineProperty(object, property, descriptor)
+
+    // Adding or changing object properties
+    Object.defineProperties(object, descriptors)
+
+    // Accessing a Property
+    Object.getOwnPropertyDescriptor(object, property)
+
+    // Accessing Properties
+    Object.getOwnPropertyDescriptors(object)
+
+    // Returns all properties as an array
+    Object.getOwnPropertyNames(object)
+
+    // Accessing the prototype
+    Object.getPrototypeOf(object)
+
+*/
+
+    // A. Using the Object.defineProperty() method
+    // Syntax ::: Object.defineProperty(object, property, descriptor)
+
+
+    ///a. Adding new Property
+    const person = {
+    firstName: "John",
+    lastName : "Doe",
+    language : "EN"
+    };
+
+    // Add a Property
+    Object.defineProperty(person , "year", {value: "2008"});
+
+    //b. changing a property value 
+    Object.defineProperty(person , "language" , {value: "HIN"}); 
+
+
+    //IF WE WANT TO MAKE THE NAME READABLE ONLY AND not to be able to edit it we can 
+    Object.defineProperty(person , "firstName" ,{writable :false}); 
+
+
+
+    // B. Using the getOwnPropertyNames() 
+    // it is used to List object properties. Object.keys() can also be used to acheive the same purpose 
+    // both of the above here will return different outputs that is : 
+
+    Object.getOwnPropertyNames(person );
+    //['firstName', 'lastName', 'language', 'year']
+    Object.keys(person); 
+    //['firstName', 'lastName', 'language']
+
+    //This is because the Object.keys() method returns all enumerable properties. Whereas getOwnPropertyNames() method returns all properties, whether enumerable or not. 
+
+//H. JavaScript Object Protection
+/*
+There are object Protection methods that can be opted for making the object and its properties safe to be dealt with
+
+// 0.  using const to prevent reassignment 
+const car = {type:"Fiat", model:"500", color:"white"};
+
+//1.  Prevents adding object properties
+Object.preventExtensions(object)
+
+//2.  Returns true if properties can be added to an object
+Object.isExtensible(object)
+
+//3.  Prevents adding and deleting object properties
+Object.seal(object)
+
+//4.  Returns true if object is sealed
+Object.isSealed(object)
+
+//5.  Prevents any changes to an object
+Object.freeze(object)
+
+//6.  Returns true if object is frozen
+Object.isFrozen(object)
+
+
+*/
+const car = {type:"Fiat", model:"500", color:"white"};
+const fruits = ["Banana", "Orange", "Apple", "Mango"]; 
+
+Object.preventExtensions(car); //cannot add property in the car object anymore
+car.color = "red"; //will not throw error as changing the value of the properties is still allowed 
+
+Object.seal(car); //prevents adding new properties or deleting old properties 
+
+car.color = "yellow"; 
+delete car.model; //will fail silently 
+
+Object.freeze(car); 
+
+//both will fail silently
+car.color = "green"; 
+delete car.model; 
+
