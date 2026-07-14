@@ -18,6 +18,7 @@ Asynchronous Callbacks
 
 Synchronous Callbacks 
 > Synchronous Callbacks are executed immediately within the outer function, blocking further operations until completion.
+> Array methods like map(), filter(), and forEach() use synchronous callbacks.
 */
 
 

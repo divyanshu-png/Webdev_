@@ -15,5 +15,3 @@ add();
 add();
 
 // the counter is now 3
-
-// a b b b a b b b b a b
