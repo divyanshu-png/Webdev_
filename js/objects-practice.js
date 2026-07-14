@@ -127,6 +127,8 @@ for(let keys of Object.keys(fruits)){
     console.log(keys + ": "+ fruits[keys])
 }
 
+
+//Converting objects to strings 
 let text = JSON.stringify(user1); 
 console.log(text) ; 
 
