@@ -7,13 +7,13 @@ React relies heavily on modern JavaScript (ES6+). You should master these specif
 
 > Template Literals: Using backticks for string interpolation (e.g., `Hello, ${name}`).
 
+> Ternary Operator & Short-Circuit Evaluation: Using conditional operators like condition ? true : false and logical operators (&&, ||, ??) for rendering elements conditionally.
+
 > Destructuring: Extracting values from arrays and properties from objects quickly (e.g., const { name, age } = user). This is used constantly in React for managing props and state.
 
 > Spread and Rest Operators (...): Knowing how to copy, merge, or split arrays and objects without modifying the original data.
 
 > Array Methods: Master methods that return new arrays without mutating the original data, especially .map(), .filter(), and .reduce(). React uses .map() frequently to render lists of elements.
-
-> Ternary Operator & Short-Circuit Evaluation: Using conditional operators like condition ? true : false and logical operators (&&, ||, ??) for rendering elements conditionally.
 
 > Modules (Import/Export): Understanding how to break your code into separate files and share logic using import and export default.
 

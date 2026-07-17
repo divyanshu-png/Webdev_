@@ -108,16 +108,20 @@ class Car {
 Static class methods are defined on the class itself.
 You cannot call a static method on an object, only on an object class.
 */
-
+class Bus{
+    constructor(name){
+        this.name = name; 
+    }
+}
 class Car{
     constructor(name){
         this.name = name; 
     }
     static hello(){
-        console.log("Hello")   
+        console.log("Hello"); 
     }
 }
 
 const myCar = new Car("Ford"); 
-
 Car.hello(); 
+
