@@ -36,6 +36,12 @@ System Actions: navigator.clipboard.writeText() interacts with the system clipbo
 File Operations: fs.promises.readFile() reads files asynchronously in Node.js.
 */
 
+let result = fetch("https://google.com");
+const response = fetch('https://typicode.com');
+navigator.clipboard.writeText(); 
+//Promise {<rejected>: TypeError: Failed to execute 'writeText' on 'Clipboard': 1 argument required, but only 0 present. …}
+
+
 /*
 2. Async Functions and Promise Chaining
 JavaScript automatically wraps return values in promises when using modern syntax keywords or chaining methods.
@@ -53,4 +59,126 @@ Promise.resolve() / Promise.reject(): Instantly outputs a promise that is alread
 Promise.all() / Promise.allSettled(): Combines multiple parallel promises into one single returned promise.
 Promise.race() / Promise.any(): Monitors multiple promises and returns a single promise based on the fastest result.
 */
+
+Promise.resolve(); 
+Promise.reject(); 
+Promise.all(); // Promise {<rejected>: TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator)) at Promise.…}
+
+
+
+//HANDLING PROMISES
+
+function getData(dataId, nextData){
+    return new Promise((resolve, reject)=>{
+        //yaha pe vo code aayega jo time lega i.e heavy process
+        setTimeout(()=>{
+            console.log("data" , dataId);
+            resolve();  
+            if(nextData){
+                nextData(); 
+            }
+        }, 3000);
+    }); 
+}
+
+
+//HOW TO USE PROMISE : .then() and .catch()
+//Agar hamara promise ends in the fufilled/resolves state then 
+
+//any function that returns a Promise 
+const getPromise = ()=>{
+    return new Promise((resolve, reject)=>{
+        console.log("Hello User!"); 
+        resolve(1234); 
+    }); 
+}
+
+//now since getPromise hamare paas ek promise return krra hai toh storing it in a variable, we have 
+let promiseResult = getPromise() ;
+promiseResult.then((res)=>{
+    console.log("Promise Fulfilled. Succesfully grabbed data!", res); 
+    //data ko show and process krne ka kaam idhar hoyega  
+}); 
+//we make both then and catch block because we dont know what will be returned, i.e either a rejection or a resolve
+promiseResult.catch((err)=>{
+    console.log("Some error occured: ", err)
+})
+
+// the value of the err and res will be the value passed by the reject or resolve respectively in the getPromise fucntion(the function that returns a promise).
+ 
+//Promise Chaining 
+
+function asyncFunction1(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            console.log("Some Data 1 !!!"); 
+            resolve("Success in fetching data from Abc API "); 
+        }, 2000)
+    });
+}
+
+function asyncFunction2(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            console.log("Some Data 2 !!!"); 
+            resolve("Success in fetching data from XYZ API "); 
+        }, 6000)
+    });
+}
+
+console.log("Fetching Data 1");
+let p1= asyncFunction1(); 
+p1.then((res)=>{
+    console.log("Success in Fetching Data 1 ", res);
+    console.log("Fetching Data 2"); 
+    let p2 = asyncFunction2(); 
+    p2.then((res)=>{
+        console.log("Successs in Fetching Data 2 ", res)
+    }); 
+
+}); 
+ 
+// this is called Promise chaining 
+//futher we shorten this using: 
+
+
+console.log("Fetching Data 1");
+asyncFunction1().then((res)=>{
+    console.log("Success in Fetching Data 1 ", res);
+    console.log("Fetching Data 2"); 
+    asyncFunction2().then((res)=>{
+        console.log("Successs in Fetching Data 2 ", res)
+    }); 
+}); 
+ 
+//ANOTHER EXACT EXAMPLE OF PROMISE CHAINING 
+function getData(dataId){
+    return new Promise((resolve, reject)=>{
+        //yaha pe vo code aayega jo time lega i.e heavy process
+        setTimeout(()=>{
+            console.log("data" , dataId);
+            resolve("Success");  
+        }, 3000);
+    }); 
+}
+
+console.log("Fetching data!"); 
+getData(1234).then((res)=>{
+    console.log(res, ". Fetched data 1234"); 
+    getData(5676).then(()=>{
+        console.log(res, "Fetched data 5678"); 
+    })
+}); 
+
+//actual promsie chains
+
+getData(1234).then((res)=>{
+    return getData(5678); 
+}).then((res)=>{
+    return getData(9123); 
+}).then((res)=>{
+    console.log(res); 
+})
+
+
 
