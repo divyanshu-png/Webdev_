@@ -180,5 +180,12 @@ getData(1234).then((res)=>{
     console.log(res); 
 })
 
+.catch(()=>{
+    console.log("Some error occured"); 
+})
+
+//A single catch statement can be used to handle errors from the entire chain
+//Promise chain is more readable for multiple asynchronous steps
+
 
 
