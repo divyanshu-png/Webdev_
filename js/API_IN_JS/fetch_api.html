@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using API in JS</h1>
+    <p>The data below is fetched using the await fetch method in JS that works with APIs to fetch data from various servers</p>
+    <button id="click">Click to see data</button>
+    <p id="item"></p>
+    
+    <table id="infoTable" class="table table-striped-columns table-bordered m-3">
+        <thead>
+            <tr>
+                <th scope="col">Departure Place and Airport</th>
+                <th scope="col">Arrival Place and Airport</th>
+                <th scope="col">Flight Date</th>
+                <th scope="col">Schedule for Departure</th>
+                <th scope="col">Aircraft</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./fetch_api.js" defer></script>
+</body>
+</html>

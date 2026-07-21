@@ -13,6 +13,7 @@ The fetch() method is used to fetch a resource (data) that returns a promise
 
 const API_KEY = "6f4ff746de21a264643978185fc06d3b"; 
 const url = `https://api.aviationstack.com/v1/flights?access_key=${API_KEY}`; 
+const item = document.getElementById("item");
 
 async function getDetailsFlight() {
     try {
@@ -22,15 +23,58 @@ async function getDetailsFlight() {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+    
         // Read the JSON data from the response body
         const data = await response.json();
-        console.log(data); 
+        console.log(data);
+        let randomNumber = Math.floor(Math.random()*100)+1 ; 
+        let flightInfo = data.data[randomNumber]; 
+        //console.log(flightInfo);
+        item.innerText ="Details for flight number: "+  flightInfo.flight.number; 
+        console.log(flightInfo); 
+
+        
+        let row = `<tr>
+                    <td>${flightInfo.departure.timezone}, ${flightInfo.departure.airport}</td>
+                    <td>${flightInfo.arrival.timezone}, ${flightInfo.arrival.airport}</td>
+                    <td>${flightInfo.flight_date}</td>
+                    <td>${flightInfo.departure.scheduled}</td>
+                    <td>${flightInfo.flight.icao}</td>
+                </tr>`;
+        document.getElementById("tableBody").innerHTML += row;  
+
+
     } catch (error) {
         console.error("Error fetching flight data:", error);
     }
 }
 
-getDetailsFlight(); 
+document.getElementById("click").addEventListener("click", ()=>{
+    getDetailsFlight();
+})
 
  
+// const url2 = "https://cors-anywhere.herokuapp.com/https://cat-fact.herokuapp.com/facts"; 
+
+// async function getFacts() {
+//     try{
+//         let result  = await fetch(url2); 
+//         if(!result.ok){
+//             console.log("Some Issue Caught!: ", result.status)
+//         }else{
+//             let randomNum = Math.floor(Math.random()*100)+1 ; 
+//             let data = await result.json();
+//             item.innerHTML = data[randomNum].text(); 
+//         }
+//     }
+//     catch(err){
+//         console.log("Error found!: ", err)
+//     }
+//     finally{
+//         console.log("API call succesfully ended!"); 
+//     }
+// }
+
+// document.getElementById("click").addEventListener("click", ()=>{
+//     getFacts(); 
+// })
